@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Weather App</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <div class="header">
+      <div class="header-left">
+        <h1 id="description">Description</h1>
+        <p id="name">Name</p>
+        <p id="coord">Coord</p>
+        <p id="date">Date</p>
+        <p id="time">Time</p>
+        <h1 id="temp">22°C</h1>
+        <div class="checkbox">
+          <p>C°</p>
+          <label class="switch">
+            <input
+              type="checkbox"
+              value="Display"
+              id="lol"
+              onclick="updateWeather()"
+            />
+            <span class="slider round"></span>
+          </label>
+          <p>F°</p>
+        </div>
+
+        <img src="#" id="icon" />
+      </div>
+      <div class="header-right">
+        <div class="feels-like main">
+          <div class="feels-like-left">
+            <img src="https://cdn-icons-png.flaticon.com/512/861/861429.png" />
+          </div>
+          <div class="feels-like-right">
+            <p class="smaller">Feels Like</p>
+            <p id="feels-like-value" class="larger">22 °C</p>
+          </div>
+        </div>
+        <div class="humidity main">
+          <div class="humidity-left">
+            <img src="https://cdn-icons-png.flaticon.com/512/481/481453.png" />
+          </div>
+          <div class="humidity-right">
+            <p class="smaller">Humidity</p>
+            <p id="humidity-value" class="larger">70 %</p>
+          </div>
+        </div>
+
+        <div class="visibility main">
+          <div class="visibility-left">
+            <img src="https://cdn-icons-png.flaticon.com/512/633/633633.png" />
+          </div>
+          <div class="visibility-right">
+            <p class="smaller">Visibility</p>
+            <p id="visibility-value" class="larger">10000 m</p>
+          </div>
+        </div>
+        <div class="wind-speed main">
+          <div class="wind-speed-left">
+            <img src="https://cdn-icons-png.flaticon.com/512/959/959711.png" />
+          </div>
+          <div class="wind-speed-right">
+            <p class="smaller">Wind Speed</p>
+            <p id="wind-speed-value" class="larger">22.5 km/h</p>
+          </div>
+        </div>
+        <form id="country">
+          <input
+            type="text"
+            id="input"
+            placeholder="Search location..."
+            value="Singapore"
+            autocomplete="off"
+            required
+          />
+        </form>
+        <p id="error">Enter a valid city</p>
+      </div>
+    </div>
+    <div class="footer">
+      <div class="checkbox">
+        <p id="day-hour-label">Day</p>
+        <label class="switch">
+          <input
+            type="checkbox"
+            value="Display"
+            id="lolol"
+            onclick="changeDayHour()"
+          />
+          <span class="slider round"></span>
+        </label>
+        <p id="day-hour-label">Hour</p>
+      </div>
+      <div class="day footer-item">
+        <div class="div-item day-item">
+          <p id="day-name">Monday</p>
+          <p id="daily-max">22 °C</p>
+          <p id="daily-min">22 °C</p>
+          <img src="#" id="daily-icon" />
+        </div>
+        <div class="div-item day-item">
+          <p id="day-name">Tuesday</p>
+          <p id="daily-max">22 °C</p>
+          <p id="daily-min">22 °C</p>
+          <img src="#" id="daily-icon" />
+        </div>
+        <div class="div-item day-item">
+          <p id="day-name">Wednesday</p>
+          <p id="daily-max">22 °C</p>
+          <p id="daily-min">22 °C</p>
+          <img src="#" id="daily-icon" />
+        </div>
+        <div class="div-item day-item">
+          <p id="day-name">Thursday</p>
+          <p id="daily-max">22 °C</p>
+          <p id="daily-min">22 °C</p>
+          <img src="#" id="daily-icon" />
+        </div>
+        <div class="div-item day-item">
+          <p id="day-name">Friday</p>
+          <p id="daily-max">22 °C</p>
+          <p id="daily-min">22 °C</p>
+          <img src="#" id="daily-icon" />
+        </div>
+        <div class="div-item day-item">
+          <p id="day-name">Saturday</p>
+          <p id="daily-max">22 °C</p>
+          <p id="daily-min">22 °C</p>
+          <img src="#" id="daily-icon" />
+        </div>
+        <div class="div-item day-item">
+          <p id="day-name">Sunday</p>
+          <p id="daily-max">22 °C</p>
+          <p id="daily-min">22 °C</p>
+          <img src="#" id="daily-icon" />
+        </div>
+      </div>
+      <div class="hour footer-item">
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
+
+<!-- 
+hourlyTemp,
+hourlyIcon, -->
